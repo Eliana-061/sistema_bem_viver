@@ -4,24 +4,287 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
-  <title>Dashboard</title>
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+  <title>dashboard | Bem Viver</title>
 </head>
 <body>
-  <main style="
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 20px;
-  ">
+  <!--ESTRUTURA PRINCIPAL-->
+  <div class="dashboard">
 
-    <h1> Dashboard </h1>
-    <p> Login realizado com sucesso! </p>
-    <p id="userEmail"> </p>
-    <button id="botaoSair"> Sair </button>
+    <!--Menu Lateral-->
+    <aside class="sidebar">
+      <div class="sidebar_logo">
+        <div class="logo_icon">
+          <i class="fa-solid fa-house"></i>
+        </div>
+        <div>
+          <h1>Bem Viver</h1>
+          <span> Sistema de Gestão de ILPI</span>
+        </div>
+      </div>
 
-  </main>
+      <!--Menu Principal-->
+      <nav class="sidebar_menu">
+        <p class="menu_titulo"> MENU PRINCIPAL </p>
+
+        <!--Página atual - a opção do menu vai ficar destaada de acordo com a página em que o usuário estiver-->
+        <a href="#" class="menu_item active">
+          <i class="fa-solid fa-house"></i>
+          <span> Início </span>
+        </a>
+        <a href="#" class="menu_item">
+          <i class="fa-solid fa-person"></i>
+          <span> Pacientes </span>
+        </a>
+        <a href="#" class="menu_item">
+          <i class="fa-solid fa-users"></i>
+          <span> Funcionários </span>
+        </a>
+        <a href="#" class="menu_item" >
+          <i class="fa-solid fa-people-arrows"></i>
+          <span> Visitas </span>
+        </a>
+        <a href="#" class="menu_item">
+          <i class="fa-solid fa-calendar-days"></i>
+          <span> Atividades </span>
+        </a>
+
+        <!--Menu Secundário - referente ao sistema-->
+        <p class="menu_titulo menu_titulo_secundario"> SISTEMA </p>
+        <a href="#" class="menu_item" >
+          <i class="fa-solid fa-chart-column"></i>
+          <span> Relatórios </span>
+        </a>
+        <a href="#" class="menu_item">
+          <i class="fa-solid fa-gear"></i>
+          <span> Configurações </span> 
+        </a>
+      </nav>
+
+      <!--Botão sair-->
+      <div class="sidebar_sair">
+        <button id="botaoSair" class="botao_sair">
+          <i class="fa-solid fa-right-from-bracket"></i>
+          <span> Sair </span>
+        </button>
+      </div>
+    </aside>
+
+    <!--Conteúdo Principal-->
+    <main class="conteudo_principal">
+      <!--Cabeçalho-->
+      <header class="cabecalho">
+        <div class="pagina_titulo">
+          <h2> Dashboard </h2>
+          <p> Visão geral da instituição </p>
+        </div>
+
+        <!--Área do usuário-->
+        <div class="cabecalho_user">
+          <button class="botao_notficacao" aria-label="Notificações">
+            <i class="fa-regular fa-bell"></i>
+            <span class="noficacoes"></span>
+          </button>
+          <!-- Foto do usuário -->
+          <div class="foto_user">
+            <i class="fa-solid fa-user"></i>
+          </div>
+          <!--Informações do usuário-->
+          <div class="info_user">
+            <strong id="nomeUser"> Funcionário </strong>
+            <span> Funcionário </span>
+          </div>
+        </div>
+      </header>
+
+      <!--Conteúdo da página-->
+      <section class="dashboard_content">
+        <div class="section_saudacao">
+            <div>
+              <h1> Bom dia! 👋 </h1>
+              <p>
+                Confira o que está acontecendo hoje no Bem Viver.
+              </p>
+            </div>
+        </div>
+
+        <!--Cards de resumo-->
+        <section class="cards_resumo">
+          <!--Cards de pacientes-->
+          <div class="card_resumo">
+            <div class="card_icon pacientes_icon">
+              <i class="fa-solid fa-person"></i>
+            </div>
+            <div class="card_content">
+              <span> Pacientes </span>
+              <strong> 32 </strong>
+              <small> Residentes cadastrados </small>
+            </div>
+          </div>
+
+          <!--Cards de visitas-->
+          <div class="card_resumo">
+            <div class="card_icon visitas_icon">
+              <i class="fa-solid fa-people-arrows"></i>
+            </div>
+            <div class="card_content">
+              <span> Visitas hoje </span>
+              <strong> 05 </strong>
+              <small> Visitas agendadas </small>
+            </div>
+          </div>
+
+          <!--Cards de atividades-->
+          <div class="card_resumo">
+            <div class="card_icon atividades_icon">
+              <i class="fa-solid fa-calendar-check"></i>
+            </div>
+            <div class="card_content">
+              <span> Atividades </span>
+              <strong> 08 </strong>
+              <small> Atividades programadas</small>
+            </div>
+          </div>
+
+          <!--Cards de funcionários-->
+          <div class="card_resumo">
+            <div class="card_icon funcionários_icon">
+              <i class="fa-solid fa-users"></i>
+            </div>
+            <div class="card_content">
+              <span> Funcionários </span>
+              <strong> 14 </strong>
+              <small> Funcionários cadastrados</small>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <!--Painel de informações-->
+      <section class="dashboard_tabela">
+        <!--Atividades do dia-->
+        <div class="dashboard_painel atividades_painel">
+          <div class="painel_cabecalho">
+            <div>
+              <h2> Atividades de hoje </h2>
+              <p> Programação do dia </p>
+            </div>
+            <button class="botao_painel"> Ver todas </button>
+          </div>
+          <!--Lista das atividades-->
+          <div class="atividades_lista">
+            <!--Atividade 1-->
+            <div class="atividade_item">
+              <div class="atividade_hora">
+                <strong> 08:00 </strong>
+                <span> manhã </span>
+              </div>
+              <div class="atividade_linha"></div>
+              <div class="atividade_info">
+                <h3> Café da manhã </h3>
+                <p> Refeitório principal </p>
+              </div>
+              <span class="atividade_status concluida">
+                Concluída
+              </span>
+            </div>
+
+            <!--Atividade 2-->
+            <div class="atividade_item">
+              <div class="atividade_hora">
+                <strong> 10:00 </strong>
+                <span> manhã </span>
+              </div>
+              <div class="atividade_linha"></div>
+              <div class="atividade_info">
+                <h3> Fisioterapia </h3>
+                <p> Sala de atendimento </p>
+              </div>
+              <span class="atividade_status pendente">
+                Próxima
+              </span>
+            </div>
+
+            <!--Atividade 3-->
+            <div class="atividade_item">
+              <div class="atividade_hora">
+                <strong> 14:00 </strong>
+                <span> tarde </span>
+              </div>
+              <div class="atividade_linha"></div>
+              <div class="atividade_info">
+                <h3> Atividade recreativa </h3>
+                <p> Sala de convivência </p>
+              </div>
+              <span class="atividade_status pendente">
+                Agendada
+              </span>
+            </div>
+          </div>
+          <!--Fim lista de atividades-->
+        </div>
+        <!--Fim painel de atividades-->
+
+        <!--Próximas visitas-->
+        <div class="dashboard_painel visitas_painel">
+          <div class="painel_cabecalho">
+            <div>
+              <h2> Próximas visitas </h2>
+              <p> Visitas agendadas </p>
+            </div>
+            <button class="botao_painel"> Ver todas </button>
+          </div>
+
+          <!--Lista de visitas-->
+          <div class="visitas_lista">
+            <!--Visitas 1-->
+            <div class="visita_item">
+              <div class="visita_icon">
+                <i class="fa-solid fa-user"></i>
+              </div>
+              <div class="visita_info">
+                <h3> Maria Oliveira </h3>
+                <p> Residente: Ana Maria </p>
+              </div>
+              <div class="visita_hora"> 15:00 </div>
+            </div>
+
+            <!--Visitas 2-->
+            <div class="visita_item">
+              <div class="visita_icon">
+                <i class="fa-solid fa-user"></i>
+              </div>
+              <div class="visita_info">
+                <h3> João Santos </h3>
+                <p> Residente: Carlos Santos </p>
+              </div>
+              <div class="visita_hora"> 16:00 </div>
+            </div>
+            
+            <!--Visitas 2-->
+            <div class="visita_item">
+              <div class="visita_icon">
+                <i class="fa-solid fa-user"></i>
+              </div>
+              <div class="visita_info">
+                <h3> Fernanda Costa </h3>
+                <p> Residente: José Costa </p>
+              </div>
+              <div class="visita_hora"> 17:00 </div>
+            </div>
+          </div>
+          <!--Fim lista de visitas-->
+
+        </div>
+        <!--Fim painel de visitas-->
+      </section>
+
+    </main>
+  </div><!--Fim da div dashboard-->
+
+  <!--JavaScript-->
   <script type="module" src="js/dashboard.js"></script>
 </body>
 </html>
