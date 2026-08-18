@@ -43,10 +43,10 @@
           <i class="fa-solid fa-users"></i>
           <span> Funcionários </span>
         </a>
-        <a href="#" class="menu_item" >
+          <a href="#" class="menu_item" >
           <i class="fa-solid fa-people-arrows"></i>
           <span> Visitas </span>
-        </a>
+          </a>
         <a href="#" class="menu_item">
           <i class="fa-solid fa-calendar-days"></i>
           <span> Atividades </span>
@@ -103,25 +103,64 @@
         <!--Título + botão-->
         <div class="pagina_cabecalho">
           <div>
-            <h1> Cadastro de pacientes </h1>
+            <h1> Gerenciamento de pacientes </h1>
             <p> 
               Cadastre e gerencie os residentes da instituição. 
             </p>
           </div>
           <!-- Botão para abrir o formulário -->
+           <!--
           <button
             type="button"
             id="novoPacienteBotao"
-            class="botao_primario"
+            class="botao_novo_paciente"
           >
             <i class="fa-solid fa-plus"></i>
             Novo paciente
           </button>
+          -->
         </div>
         <!--Fim da div pagina_cabecalho-->
 
+        <!--Lista de pacientes-->
+        <section class="painel_tabela">
+          <div class="painel_titulo">
+            <h2> Pacientes cadastrados </h2>
+            <p> Lista de residentes da instituição. </p>
+          </div>
+
+          <!--Tabela-->
+          <div class="tabela_container">
+            <table>
+              <thead>
+                <tr>
+                  <th> Nome </th>
+                  <th> Nascimento </th>
+                  <th> Responsável </th>
+                  <th> Telefone </th>
+                  <th> Ações </th>
+                </tr>
+              </thead>
+
+              <tbody id="pacientesTb">
+                <!--O JavaScript irá colocar os pacientes aqui.-->
+              </tbody>
+            </table>
+          </div>
+
+          <!--Quando não houver pacientes-->
+          <div id="tabelaVazia" class="tabela_vazia">
+            <i class="fa-solid fa-person-circle-plus"></i>
+            <h3> Nenhum paciente cadastrado </h3>
+            <p> 
+              Vá em "Novo paciente" para realizar o primeiro cadastro.
+            </p>
+          </div>
+        </section>
+        <!--Fim lista de pacientes-->
+
         <!--Formulário de cadastro - vai ficar escondido, só aparece quando o usuário apertar em novo paciente-->
-        <section id="pacienteFormContainer" class="painel_form escondido">
+        <section id="pacienteFormContainer" class="painel_form ">
           <div class="painel_titulo">
             <h2> Novo paciente </h2>
             <p> Informe os dados do residente. </p>
@@ -133,7 +172,7 @@
               <!-- Nome -->
               <div class="form_campos">
                 <label for="nome"> 
-                  Nome completo * 
+                  Nome completo *
                 </label>
                 <input
                   type="text"
@@ -215,11 +254,11 @@
               <button
                 type="button"
                 id="cancelarPacienteBotao"
-                class="botao_secundario"
+                class="botao_cancelar"
               >
                 Cancelar
               </button>
-              <button type="submit" class="botao_primario">
+              <button type="submit" class="botao_salvar">
                 <i class="fa-solid fa-floppy-disk"></i>
                 Salvar paciente
               </button>
@@ -227,43 +266,6 @@
           </form>
         </section>
         <!--Fim seçao formulário-->
-
-        <!--Lista de pacientes-->
-        <section class="painel_tabela">
-          <div class="panel_titulo">
-            <h2> Pacientes cadastrados </h2>
-            <p> Lista de residentes da instituição. </p>
-          </div>
-
-          <!--Tabela-->
-          <div class="tabela_container">
-            <table>
-              <thead>
-                <tr>
-                  <th> Nome </th>
-                  <th> Nascimento </th>
-                  <th> Responsável </th>
-                  <th> Telefone </th>
-                  <th> Ações </th>
-                </tr>
-              </thead>
-
-              <tbody id="pacientesTb">
-                <!--O JavaScript irá colocar os pacientes aqui.-->
-              </tbody>
-            </table>
-          </div>
-
-          <!--Quando não houver pacientes-->
-          <div id="emptyMessage" class="empty-message">
-            <i class="fa-solid fa-person-circle-plus"></i>
-            <h3> Nenhum paciente cadastrado </h3>
-            <p> 
-              Clique em "Novo paciente" para realizar o primeiro cadastro.
-            </p>
-          </div>
-        </section>
-        <!--Fim lista de pacientes-->
 
       </section>
     </main>
