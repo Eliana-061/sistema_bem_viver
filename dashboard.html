@@ -17,7 +17,7 @@
     <aside class="sidebar">
       <div class="sidebar_logo">
         <div class="logo_icon">
-          <i class="fa-solid fa-house"></i>
+          <img src="imagens/logo_bem_viver.png" alt="Logo do Sistema Bem Viver">
         </div>
         <div>
           <h1>Bem Viver</h1>
@@ -83,12 +83,8 @@
 
         <!--Área do usuário-->
         <div class="cabecalho_user">
-          <button class="botao_notficacao" aria-label="Notificações">
-            <i class="fa-regular fa-bell"></i>
-            <span class="noficacoes"></span>
-          </button>
-          <!-- Foto do usuário -->
-          <div class="foto_user">
+          <!-- Usuário icon -->
+          <div class="icon_user">
             <i class="fa-solid fa-user"></i>
           </div>
           <!--Informações do usuário-->
@@ -101,50 +97,42 @@
 
       <!--Conteúdo da página-->
       <section class="dashboard_content">
-        <div class="section_saudacao">
-            <div>
-              <h1> Bom dia! 👋 </h1>
-              <p>
-                Confira o que está acontecendo hoje no Bem Viver.
-              </p>
-            </div>
-        </div>
 
         <!--Cards de resumo-->
         <section class="cards_resumo">
           <!--Cards de pacientes-->
           <div class="card_resumo">
-            <div class="card_icon pacientes_icon">
+            <div class="card_icon">
               <i class="fa-solid fa-person"></i>
             </div>
             <div class="card_content">
               <span> Pacientes </span>
               <strong> 32 </strong>
-              <small> Residentes cadastrados </small>
+              <p> Pacientes cadastrados </p>
             </div>
           </div>
 
           <!--Cards de visitas-->
           <div class="card_resumo">
-            <div class="card_icon visitas_icon">
+            <div class="card_icon">
               <i class="fa-solid fa-people-arrows"></i>
             </div>
             <div class="card_content">
               <span> Visitas hoje </span>
               <strong> 05 </strong>
-              <small> Visitas agendadas </small>
+              <p> Visitas agendadas </p>
             </div>
           </div>
 
           <!--Cards de atividades-->
           <div class="card_resumo">
-            <div class="card_icon atividades_icon">
+            <div class="card_icon">
               <i class="fa-solid fa-calendar-check"></i>
             </div>
             <div class="card_content">
               <span> Atividades </span>
               <strong> 08 </strong>
-              <small> Atividades programadas</small>
+              <p> Atividades programadas</p>
             </div>
           </div>
 
@@ -156,7 +144,7 @@
             <div class="card_content">
               <span> Funcionários </span>
               <strong> 14 </strong>
-              <small> Funcionários cadastrados</small>
+              <p> Funcionários cadastrados</p>
             </div>
           </div>
         </section>
@@ -181,7 +169,7 @@
                 <strong> 08:00 </strong>
                 <span> manhã </span>
               </div>
-              <div class="atividade_linha"></div>
+              <br>
               <div class="atividade_info">
                 <h3> Café da manhã </h3>
                 <p> Refeitório principal </p>
@@ -197,7 +185,7 @@
                 <strong> 10:00 </strong>
                 <span> manhã </span>
               </div>
-              <div class="atividade_linha"></div>
+              <br>
               <div class="atividade_info">
                 <h3> Fisioterapia </h3>
                 <p> Sala de atendimento </p>
@@ -213,7 +201,7 @@
                 <strong> 14:00 </strong>
                 <span> tarde </span>
               </div>
-              <div class="atividade_linha"></div>
+              <br>
               <div class="atividade_info">
                 <h3> Atividade recreativa </h3>
                 <p> Sala de convivência </p>
@@ -246,9 +234,9 @@
               </div>
               <div class="visita_info">
                 <h3> Maria Oliveira </h3>
-                <p> Residente: Ana Maria </p>
+                <p> Paciente: Ana Maria </p>
               </div>
-              <div class="visita_hora"> 15:00 </div>
+              <strong class="visita_hora"> 15:00 </strong>
             </div>
 
             <!--Visitas 2-->
@@ -258,9 +246,9 @@
               </div>
               <div class="visita_info">
                 <h3> João Santos </h3>
-                <p> Residente: Carlos Santos </p>
+                <p> Paciente: Carlos Santos </p>
               </div>
-              <div class="visita_hora"> 16:00 </div>
+              <strong class="visita_hora"> 16:00 </strong>
             </div>
             
             <!--Visitas 2-->
@@ -270,9 +258,9 @@
               </div>
               <div class="visita_info">
                 <h3> Fernanda Costa </h3>
-                <p> Residente: José Costa </p>
+                <p> Paciente: José Costa </p>
               </div>
-              <div class="visita_hora"> 17:00 </div>
+              <strong class="visita_hora"> 17:00 </strong>
             </div>
           </div>
           <!--Fim lista de visitas-->
