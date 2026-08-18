@@ -45,7 +45,7 @@
   margin-top: 25px;
   margin-bottom: 25px;
 }
-.hidden {
+.escondido {
   /* O JavaScript vai remover essa classe quando o usuário clicar em "Novo paciente".*/
   display: none;
 }

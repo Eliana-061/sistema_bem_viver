@@ -266,13 +266,21 @@
   font-size: 1rem;
 }
 .botao_painel{
+  padding: 8px 10px;
   border: none;
-  padding: 10px;
-  border-radius: 5px;
-  background: #e9f1ef;
-  color: var(--primary);
-  font-size: 0.8rem;
-  font-weight: 700;
+  border-radius: 8px;
+  background: var(--primary);
+  color: white;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.botao_painel:hover{
+  background: var(--primary-dark);
 }
 /*Painel de atividades*/
 .atividade_item{
