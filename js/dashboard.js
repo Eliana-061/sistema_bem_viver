@@ -6,8 +6,8 @@ import {
 } from "https://www.gstatic.com/firebasejs/12.16.0/firebase-auth.js";
 
 // Pega os elementos do formulário
-const userEmail = document.getElementById("userEmail");
 const logoutButton = document.getElementById("botaoSair");
+const userName = document.getElementById("emailUser");
 
 //Verifica autenticação - para que o usuário não consiga acessar a página sem fazer o login
 onAuthStateChanged( auth,(usuario) =>{
@@ -15,7 +15,9 @@ onAuthStateChanged( auth,(usuario) =>{
     window.location.href = "index.html";
     return;
   }
-  userEmail.textContent = `Usuário: ${usuario.email}`;
+  //Mostra no console o usuário autenticado
+  console.log("Usuário logado: ", usuario.email);
+  userName.textContent = usuario.email; //Mostra o email do no dashboard
 });
 
 //Botão sair
