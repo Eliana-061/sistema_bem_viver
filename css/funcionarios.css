@@ -1,4 +1,4 @@
-.pacientes_content {
+.funcionarios_content {
   padding: 35px;
 }
 /*Cabeçalho da página pacientes*/
@@ -95,7 +95,6 @@ tbody tr:hover {
   margin-top: 25px;
   margin-bottom: 25px;
 }
-
 /*Campos do formulário*/
 .form_campos_container {
   display: grid;
@@ -112,7 +111,7 @@ tbody tr:hover {
   font-size: 0.95rem;
   font-weight: 600;
 }
-.form_campos input, textarea {
+.form_campos input, textarea, select {
   width: 100%;
   padding: 11px 13px;
   border: 1px solid #d9dfdd;
@@ -123,8 +122,12 @@ tbody tr:hover {
   font-size: 0.85rem;
   outline: none;
 }
+.form_campos select{
+  cursor: pointer;
+}
 .form_campos input:focus,
-.form_campos textarea:focus {
+.form_campos textarea:focus,
+.form_campos select:focus{
   border-color: var(--primary);
   box-shadow: 0 0 0 3px rgba(82, 125, 116, 0.1);
 }
