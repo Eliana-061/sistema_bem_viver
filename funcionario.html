@@ -6,11 +6,12 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/dashboard.css">
   <!--Específico da página pacientes-->
-  <link rel="stylesheet" href="css/pacientes.css">
+  <link rel="stylesheet" href="css/funcionarios.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-  <title>Pacientes | Bem Viver</title>
+  <title>Funcionários | Bem Viver</title>
 </head>
 <body>
+
   <!--ESTRUTURA PRINCIPAL-->
   <div class="dashboard">
     <!--Menu Lateral-->
@@ -35,11 +36,11 @@
           <i class="fa-solid fa-house"></i>
           <span> Início </span>
         </a>
-        <a href="#" class="menu_item active">
+        <a href="pacientes.html" class="menu_item">
           <i class="fa-solid fa-person"></i>
           <span> Pacientes </span>
         </a>
-        <a href="funcionario.html" class="menu_item">
+        <a href="#" class="menu_item active">
           <i class="fa-solid fa-users"></i>
           <span> Funcionários </span>
         </a>
@@ -61,7 +62,6 @@
           <span> Configurações </span> 
         </a>
       </nav>
-
       <!--Botão sair-->
       <div class="sidebar_sair">
         <button id="botaoSair" class="botao_sair">
@@ -71,7 +71,7 @@
       </div>
       <!--Fim menu principal-->
     </aside>
-    <!--Fim menu Lateral-->
+    <!--Fim aside-->
 
     <!--Conteúdo Principal-->
     <main class="conteudo_principal">
@@ -96,24 +96,24 @@
         </div>
       </header>
 
-      <!--Conteúdo dos pacientes-->
-      <section class="pacientes_content">
+      <!--Conteúdo dos funcionário-->
+      <section class="funcionarios_content">
         <!--Título-->
         <div class="pagina_cabecalho">
           <div>
-            <h1> Gerenciamento de pacientes </h1>
+            <h1> Gerenciamento de funcionarios </h1>
             <p> 
-              Cadastre e gerencie os residentes da instituição. 
+              Cadastre e gerencie os funcionarios da instituição. 
             </p>
           </div>
         </div>
         <!--Fim da div pagina_cabecalho-->
 
-        <!--Lista de pacientes-->
+        <!--Lista de funcionários-->
         <section class="painel_tabela">
           <div class="painel_titulo">
-            <h2> Pacientes cadastrados </h2>
-            <p> Lista de residentes da instituição. </p>
+            <h2> Funcionários cadastrados </h2>
+            <p> Lista de funcionarios da instituição. </p>
           </div>
 
           <!--Tabela-->
@@ -122,38 +122,38 @@
               <thead>
                 <tr>
                   <th> Nome </th>
-                  <th> Nascimento </th>
-                  <th> Responsável </th>
+                  <th> Cargo </th>
                   <th> Telefone </th>
+                  <th> Email </th>
                   <th> Ações </th>
                 </tr>
               </thead>
 
-              <tbody id="pacientesTb">
+              <tbody id="funcionariosTb">
                 <!--O JavaScript irá colocar os pacientes aqui-->
               </tbody>
             </table>
           </div>
 
-          <!--Quando não houver pacientes-->
+          <!--Quando não houver funcionários-->
           <div id="tabelaVazia" class="tabela_vazia">
             <i class="fa-solid fa-person-circle-plus"></i>
-            <h3> Nenhum paciente cadastrado </h3>
+            <h3> Nenhum funcionario cadastrado </h3>
             <p> 
-              Vá em "Novo paciente" para realizar o primeiro cadastro.
+              Vá em "Novo funcionario" para realizar o primeiro cadastro.
             </p>
           </div>
+          <!--Fim tabela-->
         </section>
-        <!--Fim lista de pacientes-->
 
         <!--Formulário de cadastro-->
-        <section id="pacienteFormContainer" class="painel_form ">
+        <section id="funcionarioFormContainer" class="painel_form ">
           <div class="painel_titulo">
-            <h2> Novo paciente </h2>
-            <p> Informe os dados do residente. </p>
+            <h2> Novo funcionario </h2>
+            <p> Informe os dados do funcionario. </p>
           </div>
 
-          <form id="pacienteForm">
+          <form id="funcionarioForm">
             <!-- Campos do formulário -->
             <div class="form_campos_container">
               <!-- Nome -->
@@ -191,6 +191,42 @@
                   placeholder="000.000.000-00"
                 >
               </div>
+              <!-- Cargo -->
+              <div class="form_campos">
+                <label for="cargo"> Cargo * </label>
+                <select name="cargo" id="cargo" required>
+                  <option value="" selected disabled>
+                    Selecione o cargo
+                  </option>
+                  <option value="Administrador">
+                    Administrador
+                  </option>
+                  <option value="Assistente Administrativo">
+                    Assistente Administrativo
+                  </option>
+                  <option value="Médico(a)">
+                    Médico(a)
+                  </option>
+                  <option value="Enfermeiro(a)">
+                    Enfermeiro(a)
+                  </option>
+                  <option value="Cuidador(a) de idosos">
+                    Cuidador(a) de idosos
+                  </option>
+                  <option value="Fisioterapeuta">
+                    Fisioterapeuta
+                  </option>
+                  <option value="Psicólogo">
+                    Psicólogo
+                  </option>
+                  <option value="Nutricionista">
+                    Nutricionista
+                  </option>
+                  <option value="Serviços gerais">
+                    Serviços gerais
+                  </option>
+                </select>
+              </div>
               <!-- Telefone -->
               <div class="form_campos">
                 <label for="telefone"> Telefone </label>
@@ -201,16 +237,27 @@
                   placeholder="(99) 99999-9999"
                 >
               </div>
-              <!-- Responsável -->
+              <!-- Email -->
               <div class="form_campos">
-                <label for="responsavel"> 
-                  Responsável
+                <label for="email"> E-mail * </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Digite seu e-mail"
+                  required
+                >
+              </div>
+              <!-- Data de admissão -->
+              <div class="form_campos">
+                <label for="dataAdmissao">
+                  Data de admissão
                 </label>
                 <input
-                  type="text"
-                  id="responsavel"
-                  name="responsavel"
-                  placeholder="Nome do responsável"
+                  type="date"
+                  id="dataAdmissao"
+                  name="dataAdmissao"
+                  required
                 >
               </div>
               <!-- Endereço -->
@@ -220,7 +267,7 @@
                   type="text"
                   id="endereco"
                   name="endereco"
-                  placeholder="Endereço do paciente"
+                  placeholder="Endereço do funcionario"
                 >
               </div>
               <!-- Observações -->
@@ -240,27 +287,29 @@
             <div class="form_botoes">
               <button
                 type="button"
-                id="cancelarPacienteBotao"
+                id="cancelarFuncionarioBotao"
                 class="botao_cancelar"
               >
                 Cancelar
               </button>
               <button type="submit" id="botaoSalvar" class="botao_salvar">
                 <i class="fa-solid fa-floppy-disk"></i>
-                Salvar paciente
+                Salvar funcionario
               </button>
             </div>
+
           </form>
         </section>
-        <!--Fim seçao formulário-->
+        <!--Fim formulário de cadastro-->
 
       </section>
     </main>
-    <!--Fim conteúdo principal-->
+    <!--Fim conteúdo Principal-->
+
   </div>
   <!--Fim da div dashboard-->
 </body>
 
-  <!--JavaScript-->
-  <script type="module" src="js/pacientes.js"></script>
+<!--JavaScript-->
+<script type="module" src="js/funcionario.js"></script>
 </html>
