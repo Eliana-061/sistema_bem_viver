@@ -36,7 +36,7 @@ mostrarSenha.addEventListener("click", () => {
 
 //Verificar se o usuário já esta logado
 onAuthStateChanged(
-  auth, (usuario) => {
+  auth, async (usuario) => {
     if (usuario) {
       window.location.href = "dashboard.html";
     }
