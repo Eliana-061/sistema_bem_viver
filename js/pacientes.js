@@ -75,7 +75,7 @@ pacienteForm.addEventListener("submit", async (event) =>{
       await updateDoc(doc(db, "pacientes", pacienteEditandoId),{
         //Atualiza o documento
         nome: nomeInput.value.trim(),
-        dataNascimento: dataNascimentoInput.value,
+        dataNascimento: dataNascimentoInput.value.trim(),
         cpf: cpfInput.value.trim(),
         telefone: telefoneInput.value.trim(),
         responsavel: responsavelInput.value.trim(),
