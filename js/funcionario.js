@@ -18,7 +18,7 @@ import {
 //PEGA OS ELEMENTOS DA PÁGINA
 const botaoSair = document.getElementById("botaoSair");
 const userNome = document.getElementById("emailUser");
-const cancelarFuncionarioBotao = document.getElementById("cancelarFuncionarioBotao");
+const cancelarBotao = document.getElementById("cancelarBotao");
 const botaoSalvar = document.getElementById("botaoSalvar");
 //Corpo da tabela
 const funcionariosTb = document.getElementById("funcionariosTb");
@@ -55,7 +55,7 @@ onAuthStateChanged(auth, async (usuario) =>{
 });
 
 //Cancelar cadastro
-cancelarFuncionarioBotao.addEventListener("click", () => {
+cancelarBotao.addEventListener("click", () => {
   //Limpa todos os campos
   funcionarioForm.reset();
   //Sai do modo edição
