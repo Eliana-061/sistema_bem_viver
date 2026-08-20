@@ -185,6 +185,22 @@
 .dashboard_content {
   padding: 35px 65px;
 }
+/*Cabeçalho da página dashboard*/
+.pagina_cabecalho {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+.pagina_cabecalho h1 {
+  color: var(--text);
+  font-size: 1.7rem;
+}
+.pagina_cabecalho p {
+  margin-top: 5px;
+  color: var(--text-light);
+  font-size: 1rem;
+}
 /*Cards de resumo*/
 .cards_resumo{
   display: grid;
@@ -264,6 +280,7 @@
 }
 .botao_painel{
   padding: 8px 10px;
+  text-decoration: none;
   border: none;
   border-radius: 8px;
   background: var(--primary);
@@ -283,7 +300,7 @@
 .atividade_item{
   min-height: 78px;
   display: grid;
-  grid-template-columns: 55px 2px 1fr auto;
+  grid-template-columns: 75px 65px minmax(0, 1fr) auto;
   align-items: center;
   gap: 15px;
   border-bottom: 1px solid #f0f2f2;
@@ -305,20 +322,37 @@
   color: #6a6e6d;
   font-size: 0.9rem;
 }
+.atividade_data{
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.atividade_data strong{
+  color: var(--text);
+  font-size: 1rem;
+}
+.atividade_data span{
+  color: #6a6e6d;
+  font-size: 0.9rem;
+}
+.atividade_info{
+  min-width: 0; /*Evita que um nome muito grande empurre as outras colunas*/
+}
 .atividade_info h3{
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: var(--text);
 }
 .atividade_info p{
   margin-top: 3px;
   color: var(--text-light);
-  font-size: 1.2rem;
+  font-size: 0.9rem;
 }
 .atividade_status {
   padding: 5px 8px;
   border-radius: 5px;
   font-size: 1rem;
   font-weight: 600;
+  white-space: nowrap; /*empede que o "em andamento quebre em duas linhas"*/
 }
 .atividade_status.concluida{
   background: #d9e6df;
@@ -327,4 +361,33 @@
 .atividade_status.pendente{
   background: #f7e8ce;
   color: #a63b20;
+}
+.atividade_status.cancelada{
+  background: #f7e8ce;
+  color: #9b4545;
+}
+.atividade_status.andamento{
+  background: #f7e8ce;
+  color: #3f6f85;
+}
+
+/*Mensagem da tabela vazia*/
+.tabela_vazia {
+  text-align: center;
+  padding: 45px 20px;
+}
+.tabela_vazia i {
+  display: block;
+  margin-bottom: 10px;
+  color: #99aaa6;
+  font-size: 32px;
+}
+.tabela_vazia h3 {
+  color: var(--text);
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+.tabela_vazia p{
+  font-size: 0.85rem;
+  color: var(--text-light);
 }

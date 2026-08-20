@@ -81,7 +81,7 @@ tbody tr:hover {
   font-size: 1rem;
   margin-bottom: 5px;
 }
-.tabela_vazia {
+.tabela_vazia p{
   font-size: 0.85rem;
   color: var(--text-light);
 }
