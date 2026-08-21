@@ -100,7 +100,7 @@ function carregarProximasAtividades(resultado) {
   //Nenhuma atividade hoje ou futura
   if (atividades.length === 0) {
     atividadesLista.innerHTML = `
-      <div class="atividades_vazia">
+      <div class="tabela_vazia">
         <i class="fa-solid fa-calendar-check"></i>
         <h3>Nenhuma atividade próxima</h3>
         <p>
@@ -238,4 +238,3 @@ function definirStatus(status) {
     texto: "Agendada", classe: "pendente"
   };
 }
-
