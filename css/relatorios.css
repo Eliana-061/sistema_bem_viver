@@ -4,7 +4,7 @@
 
 /*Painel*/
 .relatorio_painel {
-  background: var(--white);
+  background: var(--branco-suave);
   border: 1px solid var(--border);
   border-radius: 13px;
   padding: 25px;
@@ -44,23 +44,24 @@
 }
 .status_item strong {
   font-size: 0.95rem;
+  font-weight: 700;
 }
 .status_item div span {
-  color: var(--text-light);
+  color: var(--blue);
   font-size: 1.2rem;
   font-weight: 600;
 }
 .agendada {
-  color: #8a5823;
+  color: #b96812;
 }
 .andamento {
-  color: #2d516b;
+  color: #1d4968;
 }
 .concluida {
-  color: #316e4b;
+  color: #20613c;
 }
 .cancelada {
-  color: #7a2b2b;
+  color: #701616;
 }
 
 /*Cargos*/
@@ -96,7 +97,7 @@ table {
   border-collapse: collapse;
 }
 thead {
-  background: #65af8a;
+  background: var(--blue);
 }
 th {
   padding: 13px;

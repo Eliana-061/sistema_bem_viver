@@ -33,7 +33,7 @@
   font-size: 1rem;
 }
 .painel_tabela {
-  background: white;
+  background: var(--branco-suave);
   border: 1px solid var(--border);
   border-radius: 13px;
   padding: 25px;
@@ -47,7 +47,7 @@ table {
   border-collapse: collapse;
 }
 thead {
-  background: #65af8a;
+  background: var(--blue);
 }
 th {
   padding: 13px;
@@ -88,7 +88,7 @@ tbody tr:hover {
 
 /*FORMULÁRIO*/
 .painel_form {
-  background: white;
+  background: var(--branco-suave);
   border: 1px solid var(--border);
   border-radius: 13px;
   padding: 25px;
@@ -117,7 +117,7 @@ tbody tr:hover {
   padding: 11px 13px;
   border: 1px solid #d9dfdd;
   border-radius: 8px;
-  background: white;
+  background: var(--branco-suave);
   color: var(--text);
   font-family: inherit;
   font-size: 0.85rem;
@@ -144,7 +144,7 @@ tbody tr:hover {
   padding: 8px 10px;
   border: none;
   border-radius: 8px;
-  background: rgb(170, 49, 49);
+  background: var(--accent);
   color: white;
   font-size: 0.85rem;
   font-weight: 700;
@@ -154,13 +154,13 @@ tbody tr:hover {
   justify-content: center;
 }
 .botao_cancelar:hover {
-  background: rgb(145, 34, 34);
+  background: #9c0606;
 }
 .botao_salvar {
   padding: 8px 10px;
   border: none;
   border-radius: 8px;
-  background: #539273;
+  background: #157936;
   color: white;
   font-size: 0.85rem;
   font-weight: 700;
@@ -171,5 +171,5 @@ tbody tr:hover {
   gap: 8px;
 }
 .botao_salvar:hover {
-  background: var(--primary-dark);
+  background: #0b4d21;
 }
